@@ -4,18 +4,61 @@
   grid-template-rows: auto;
   grid-template-areas:
     "header"
-    "nav"
+    "navigation"
     "main";
+  @include breakpoint {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+      "header header"
+      "navigation main";
+  }
 }
 
 .header {
   grid-area: header;
+  background-color: steelblue;
 }
 
 .nav {
-  grid-area: nav;
+  grid-area: navigation;
+  background-color: cyan;
 }
 
 .main {
   grid-area: main;
+  display: grid;
+  @include breakpoint {
+    grid-template-columns: 50%;
+  }
+}
+
+.traffic,
+.social-container {
+  @include breakpoint {
+    grid-column: 1 / span 2;
+  }
+}
+
+.daily,
+.members,
+.message {
+  @include breakpoint {
+    grid-column: 1 / span 1;
+  }
+}
+
+.mobile,
+.activity,
+.settings {
+  @include breakpoint {
+    grid-column: 2 / span 1;
+  }
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw;
+  @include breakpoint {
+    width: 45vw;
+  }
 }
