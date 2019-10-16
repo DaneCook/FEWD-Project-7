@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title>Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="normalize.css" rel="stylesheet">
-    <!-- <link href="css/styles.css" rel="stylesheet"> -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/toggle-switch.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
-  <body>
-    <header>
+  <body class="grid-container">
+    <header class="header">
       <h1>YourApp</h1>
       <div>
         <?xml version="1.0" encoding="utf-8"?>
@@ -32,13 +33,13 @@
       <h3>Dane Cook</h3>
     </header>
 
-    <nav>
+    <nav class="nav">
       <a><img src="icons/icon-dashboard.svg" alt="Icon for the sahboard page."></a>
       <a><img src="icons/icon-members.svg" alt="Icon for the members page."></a>
       <a><img src="icons/icon-visits.svg" alt="Icon for the visits."></a>
       <a><img src="icons/icon-settings.svg" alt="Icon for the settings page."></a>
     </nav>
-    <main>
+    <main class="main">
       <div class="main-header">
         <h2 class="main-headline">Dashboard</h2>
         <div class="search-bar">
@@ -141,9 +142,132 @@
         </div>
       </div>
 
+      <section class="members">
+        <h3>New Members</h3>
 
+        <div class="members-container">
+          <img src="images/member-1.jpg" class="profile-image">
+          <div class="members-text">
+            <p>Victoria Chambers</p>
+            <a href="#">victoria.chambers80@example.com</a>
+          </div>
+          <div>10/15/15</div>
+        </div>
 
+        <div class="members-container">
+          <img src="images/member-2.jpg" class="profile-image">
+          <div class="members-text">
+            <p>Dale Byrd</p>
+            <a href="#">dale.byrd52@example.com</a>
+          </div>
+          <div>10/15/15</div>
+        </div>
 
+        <div class="members-container">
+          <img src="images/member-3.jpg" class="profile-image">
+          <div class="members-text">
+            <p>Dawn Wood</p>
+            <a href="#">dawn.wood16@example.com</a>
+          </div>
+          <div>10/15/15</div>
+        </div>
+
+        <div class="members-container">
+          <img src="images/member-4.jpg" class="profile-image">
+          <div class="members-text">
+            <p>Dan oliver</p>
+            <a href="#">dan.oliver82@example.com</a>
+          </div>
+          <div>10/15/15</div>
+        </div>
+      </section>
+
+      <section class="activity">
+        <h3>Recent Activity</h3>
+
+        <div class="members-container">
+          <img src="images/member-1.jpg" class="profile-image">
+          <div class="members-text">
+            <p>Victoria Chambers commented on YourApp's SEO Tips</p>
+            <p>4 hours ago</p>
+          </div>
+          <div>Arrow image</div>
+        </div>
+
+        <div class="members-container">
+          <img src="images/member-2.jpg" class="profile-image">
+          <div class="members-text">
+            <p>Dale Byrd likes the post Facebook's changes for 2016</p>
+            <p>5 hours ago</p>
+          </div>
+          <div>Arrow image</div>
+        </div>
+
+        <div class="members-container">
+          <img src="images/member-3.jpg" class="profile-image">
+          <div class="members-text">
+            <p>Dawn Wood commented on Facebook's changes for 2016</p>
+            <p>5 hours ago</p>
+          </div>
+          <div>Arrow image</div>
+        </div>
+
+        <div class="members-container">
+          <img src="images/member-4.jpg" class="profile-image">
+          <div class="members-text">
+            <p>Dan Oliver posted YourApp's SEO Tips</p>
+            <p>1 day ago</p>
+          </div>
+          <div>Arrow image</div>
+        </div>
+      </section>
+
+      <section class="message">
+        <h3>Message User</h3>
+
+        <form class="widget-container">
+          <input type="text" placeholder="Search for User" class="form-field" id="userField">
+          <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
+          <button class="button-primary id="send">Send</button>
+        </form>
+      </section>
+
+      <section class="settings">
+        <h3>Settings</h3>
+
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+            <strong>Send Email Notifications</strong>
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+            <strong>Set Profile to Public</strong>
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+
+        <select class="form-field" id="timezone">
+          <option disabled selected>Select a Timezone</option>
+            <option>Eastern Daylight Time(GMT-4)</option>
+            <option>Central Daylight Time(GMT-5)</option>
+            <option>Mountain Daylight Time(GMT-6)</option>
+            <option>Pacific Daylight Time(GMT-7)</option>
+            <option>Alaska Daylight Time(GMT-8)</option>
+        </select>
+        <div class="settings-button">
+          <button class="button-primary" id="save">Save</button>
+          <button class="button-disabled" id=cancel>Cancel</button>
+        </div>
+      </section>
     </main>
     <script href="js/app.js"></script>
   </body>
