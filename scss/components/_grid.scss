@@ -7,7 +7,17 @@
     "navigation"
     "main";
   @include breakpoint {
-    grid-template-columns: 55px 1fr;
+    margin: 0 auto;
+    max-width: 100%;
+    grid-template-columns: 75px 1fr;
+    grid-template-areas:
+      "header header"
+      "navigation main";
+  }
+  @include breakpoint2 {
+    margin: 0 auto;
+    max-width: 100%;
+    grid-template-columns: 75px 1fr;
     grid-template-areas:
       "header header"
       "navigation main";
@@ -16,13 +26,118 @@
 
 .header {
   grid-area: header;
-  background-color: steelblue;
+  background-color: #7477BF;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
 }
 
 .nav {
   grid-area: navigation;
-  background-color: cyan;
+  background-color: #4F4779;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  @include breakpoint {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    img {
+      margin-top: 40px;
+    }
+  }
+  @include breakpoint2 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    img {
+      margin-top: 40px;
+    }
+  }
 }
+
+canvas {
+  max-width: 100%;
+}
+
+.main {
+  max-width: 100%;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include breakpoint {
+    grid-column: 1 / span 2;
+  }
+}
+
+.main-headline {
+  margin: 0px;
+  padding: 20px;
+  border-right: 1px grey solid;
+}
+
+.search-bar {
+  width: 100%;
+  border-bottom: 1px grey solid;
+  background-color: lightgray;
+}
+
+.search-bar-top {
+  float: right;
+  height: 40px;
+  width: 80%;
+  border-radius: 5px;
+  margin: 15px;
+  border: 1px solid gray;
+  padding-left: 10px;
+  @include breakpoint {
+    width: 40%;
+
+  }
+  @include breakpoint2 {
+    width: 40%;
+  }
+}
+
+.alert {
+  margin: 15px;
+  background-color: #7477BF;
+  border-radius: 5px;
+  @include breakpoint {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+  }
+  @include breakpoint2 {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+  }
+}
+
+.alert-banner {
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.alert-banner-close {
+  margin-left: auto;
+}
+
 
 .main {
   grid-area: main;
@@ -30,11 +145,71 @@
   @include breakpoint {
     grid-template-columns: 50%;
   }
+  @include breakpoint2 {
+    grid-template-columns: 50%;
+  }
 }
+
+.app-name {
+  margin-left: 20px;
+  margin-right: auto;
+  color: white;
+}
+
+.bell-icon {
+  height: 30px;
+  width: 30px;
+}
+
+.bell-icon-box {
+  padding: 12px;
+  border-right: 1px #4F4779 solid;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.profile-pic-name {
+  margin-right: 15px;
+  color: white;
+}
+
+.traffic {
+  max-width: 100%;
+}
+
+#traffic-chart {
+  @include breakpoint {
+    grid-column: 1 / span 2;
+  }
+  @include breakpoint2 {
+    grid-column: 1 / span 2;
+  }
+}
+
+.traffic-header {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.traffic-nav li {
+  display: inline-block;
+}
+
 
 .traffic,
 .social-container {
   @include breakpoint {
+    grid-column: 1 / span 2;
+  }
+  @include breakpoint2 {
     grid-column: 1 / span 2;
   }
 }
@@ -45,12 +220,18 @@
   @include breakpoint {
     grid-column: 1 / span 1;
   }
+  @include breakpoint2 {
+    grid-column: 1 / span 1;
+  }
 }
 
 .mobile,
 .activity,
 .settings {
   @include breakpoint {
+    grid-column: 2 / span 1;
+  }
+  @include breakpoint2 {
     grid-column: 2 / span 1;
   }
 }
@@ -61,4 +242,82 @@
   @include breakpoint {
     width: 45vw;
   }
+  @include breakpoint2 {
+    width: 45vw;
+  }
+}
+
+.widget-container-full {
+  margin: 0 auto;
+  @include breakpoint {
+    width: 90vw;
+  }
+  @include breakpoint2 {
+    width: 90vw;
+  }
+}
+
+.daily {
+  border-top: 1px grey solid;
+  border-bottom: 1px grey solid;
+  padding: 10px;
+}
+
+.daily-header {
+  padding-left: 10px;
+}
+
+.mobile {
+  border-bottom: 1px grey solid;
+  padding: 10px 30px 10px 10px;
+  @include breakpoint {
+    border: 1px grey solid;
+  }
+}
+
+.mobile-header {
+  padding-left: 10px;
+}
+
+.social-header {
+  padding-left: 20px;
+}
+
+#Layer_1 {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.twitter-logo {
+  padding-top: 5px;
+}
+
+.social-image {
+  width: 100px;
+  height: 100px;
+  background-color: #7477BF;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.twitter-box,
+.facebook-box,
+.google-plus-box {
+  margin: 15px auto;
+  padding: 10px;
+  width: 70%;
+  display: flex;
+  border: 1px grey solid;
+  border-radius: 5px;
+  background-color: lightgrey;
+}
+
+.social-box-number {
+  font-size: 40px;
+  margin: 0;
+}
+
+.social-box-name {
+  margin: 20px 0 0 0;
 }

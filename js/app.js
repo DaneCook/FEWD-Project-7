@@ -111,7 +111,9 @@ const mobileOptions = {
     position: 'right',
     labels: {
       boxWidth: 20,
-      fontStyle: 'bold'
+      fontStyle: 'bold',
+      padding: 20,
+      fontSize: 16
     }
   }
 }
