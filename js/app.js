@@ -1,4 +1,4 @@
-const alert = document.getElementById('alert');
+const alertBanner = document.getElementById('alert');
 const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById('mobile-chart');
@@ -13,7 +13,7 @@ const send = document.getElementById('send');
 
 
 
-alert.innerHTML =
+alertBanner.innerHTML =
   `
     <div class="alert-banner">
       <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks
@@ -22,10 +22,10 @@ alert.innerHTML =
     </div>
   `
 
-alert.addEventListener('click', e => {
+alertBanner.addEventListener('click', e => {
   const element = e.target;
   if (element.classList.contains("alert-banner-close")) {
-    alert.style.display = "none";
+    alertBanner.style.display = "none";
   }
 });
 
@@ -129,9 +129,9 @@ send.addEventListener('click', () => {
     alert("Please fill out user and message fields before sending");
   } else if (user.value === "") {
     alert("Please fill out user field before sending");
-  } else if (measse.value === "") {
+  } else if (message.value === "") {
     alert("Please fill out message field before sending");
   } else {
-    alert("Message successfully sent to: ${user.value}");
+    alert(`Message successfully sent to: ${user.value}`);
   }
 });

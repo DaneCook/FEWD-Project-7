@@ -3,5 +3,5 @@
 }
 
 @mixin breakpoint2 {
-  @media (min-width: $brk-tablet) {@content;}
+  @media (min-width: $brk-desktop) {@content;}
 }

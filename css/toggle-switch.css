@@ -28,7 +28,7 @@
  */
   .switch-light {
     position: relative;
-    display: block;
+    display: flex;
     /* simulate default browser focus outlines on the switch,
    * when the inputs are focused.
    */ }
@@ -273,12 +273,16 @@
     border: 0.25em solid #D8D9DB;
     transition: all .2s ease-out; }
   .switch-ios.switch-light > span {
-    display: block;
-    width: 100%;
+    display: inline;
+    width: 40%;
     height: 2em;
     background-color: #D8D9DB;
     border-radius: 1.75em;
-    transition: all .4s ease-out; }
+    transition: all .4s ease-out;
+    margin: 0 auto;
+
+
+  }
   .switch-ios.switch-light > span span {
     position: absolute;
     top: 0;
