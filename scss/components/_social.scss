@@ -1,0 +1,58 @@
+.social-header {
+  padding-left: 20px;
+}
+
+#Layer_1 {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.twitter-logo {
+  padding-top: 5px;
+}
+
+.social-image {
+  width: 100px;
+  height: 100px;
+  background-color: $color-primary;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.twitter-box,
+.facebook-box,
+.google-plus-box {
+  margin: 15px auto;
+  padding: 10px;
+  width: 70%;
+  display: flex;
+  @include border;
+  border-radius: 5px;
+  background-color: $color-secondary;
+  @include breakpoint {
+    width: 30%;
+  }
+}
+
+.social-container {
+  padding-bottom: 20px;
+}
+
+.social-box-number {
+  font-size: 28px;
+  margin: 0;
+  @include breakpoint2 {
+    font-size: 40px;
+  }
+}
+
+.social-box-name {
+  margin: 20px 0 0 0;
+}
+
+.social-box-container {
+  @include breakpoint {
+    display: flex;
+  }
+}

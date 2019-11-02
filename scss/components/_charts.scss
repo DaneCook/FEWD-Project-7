@@ -1,0 +1,97 @@
+.traffic {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+#traffic-chart {
+  @include breakpoint {
+    grid-column: 1 / span 2;
+  }
+}
+
+.traffic-header {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.traffic-nav li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.traffic-nav-link-active {
+  background-color: $color-highlight;
+  border-radius: 25%;
+  color: white;
+}
+
+
+.traffic,
+.social-container {
+  @include breakpoint {
+    grid-column: 1 / span 2;
+  }
+}
+
+.daily,
+.members,
+.message {
+  @include breakpoint {
+    grid-column: 1 / span 1;
+  }
+}
+
+.mobile,
+.activity,
+.settings {
+  @include breakpoint {
+    grid-column: 2 / span 1;
+  }
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw;
+  @include breakpoint {
+    width: 45vw;
+  }
+}
+
+.widget-container-full {
+  margin: 0 auto;
+  @include breakpoint {
+    width: 90vw;
+  }
+}
+
+.daily {
+  @include border-top;
+  @include border-bottom;
+  padding: 10px 10px 25px 10px;
+}
+
+.daily-header {
+  padding-left: 10px;
+}
+
+#daily-chart {
+  @include breakpoint {
+    padding-right: 10px;
+  }
+}
+
+.mobile {
+  @include border-bottom;
+  padding: 10px 30px 25px 10px;
+  @include breakpoint {
+    border: 1px $color-border solid;
+  }
+}
+
+.mobile-header {
+  padding-left: 10px;
+}

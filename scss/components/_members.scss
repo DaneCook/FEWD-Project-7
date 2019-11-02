@@ -1,0 +1,55 @@
+
+.members {
+  @include border-top;
+  @include breakpoint {
+    @include border-right;
+  }
+}
+
+.activity {
+  @include breakpoint {
+    @include border-top;
+  }
+}
+
+.activity-arrow {
+  font-weight: 100;
+  font-size: 30px;
+  margin-left: auto;
+  color: grey;
+}
+
+.profile-image {
+  border-radius: 50%;
+  margin-right: 10px;
+  @include breakpoint {
+    width: 100px;
+    height: 100px;
+  }
+  @include breakpoint2 {
+    height: 128px;
+    width: 128px;
+  }
+}
+
+.members-header,
+.activity-header {
+  padding-left: 20px;
+}
+
+.members-container {
+  display: flex;
+  padding: 20px 10px;
+  @include border-bottom;
+  align-items: center;
+  @include breakpoint {
+    font-size: 12px;
+  }
+  @include breakpoint2 {
+    font-size: 16px;
+  }
+}
+
+.member-date {
+  margin-left: auto;
+}

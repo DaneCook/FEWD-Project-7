@@ -1,0 +1,41 @@
+
+.message {
+  @include border-bottom;
+  @include breakpoint {
+    @include border-right;
+  }
+}
+
+.message-header {
+  padding-left: 20px;
+}
+
+.widget-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  height: 40px;
+  width: 80%;
+  margin: 10px auto;
+  padding-left: 10px;
+  @include border;
+  border-radius: 5px;
+}
+
+.form-area {
+  height: 100px;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px 0px 0px 10px;
+  border-radius: 5px;
+}
+
+.settings-header {
+  padding-left: 20px;
+}
+
+.switch-light {
+  margin: 20px;
+}

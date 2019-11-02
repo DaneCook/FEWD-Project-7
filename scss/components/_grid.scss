@@ -15,19 +15,11 @@
       "header header"
       "navigation main";
   }
-  @include breakpoint2 {
-    margin: 0 auto;
-    max-width: 100%;
-    grid-template-columns: 75px 1fr;
-    grid-template-areas:
-      "header header"
-      "navigation main";
-  }
 }
 
 .header {
   grid-area: header;
-  background-color: #7477BF;
+  background-color: $color-primary;
   height: 100%;
   display: flex;
   align-items: center;
@@ -36,7 +28,7 @@
 
 .nav {
   grid-area: navigation;
-  background-color: #4F4779;
+  background-color: $color-primary-dark;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -56,25 +48,6 @@
       margin-top: 40px;
     }
   }
-  @include breakpoint2 {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    img {
-      margin-top: 40px;
-    }
-  }
-}
-
-a {
-  text-decoration: none;
-  color: #7477BF;
-}
-
-canvas {
-  max-width: 100%;
 }
 
 .main {
@@ -93,13 +66,13 @@ canvas {
 .main-headline {
   margin: 0px;
   padding: 20px;
-  border-right: 1px grey solid;
+  @include border-right;
 }
 
 .search-bar {
   width: 100%;
-  border-bottom: 1px grey solid;
-  background-color: lightgray;
+  background-color: $color-secondary;
+  @include border-bottom;
 }
 
 .search-bar-top {
@@ -108,26 +81,18 @@ canvas {
   width: 80%;
   border-radius: 5px;
   margin: 15px;
-  border: 1px solid gray;
+  @include border;
   padding-left: 10px;
   @include breakpoint {
-    width: 40%;
-
-  }
-  @include breakpoint2 {
     width: 40%;
   }
 }
 
 .alert {
   margin: 15px;
-  background-color: #7477BF;
+  background-color: $color-primary;
   border-radius: 5px;
   @include breakpoint {
-    grid-row: 2 / span 1;
-    grid-column: 1 / span 2;
-  }
-  @include breakpoint2 {
     grid-row: 2 / span 1;
     grid-column: 1 / span 2;
   }
@@ -149,9 +114,6 @@ canvas {
   grid-area: main;
   display: grid;
   @include breakpoint {
-    grid-template-columns: 50%;
-  }
-  @include breakpoint2 {
     grid-template-columns: 50%;
   }
 }
@@ -182,14 +144,14 @@ canvas {
 
 .bell-icon-box {
   padding: 12px;
-  border-right: 1px #4F4779 solid;
+  border-right: 1px $color-primary-dark solid;
 }
 
 .bell-notification {
   position: absolute;
   width: 5px;
   height: 5px;
-  background-color: #2AF26D;
+  background-color: $color-highlight;
   border-radius: 50%;
   top: 11px;
   right: 13px;
@@ -206,319 +168,4 @@ canvas {
 .profile-pic-name {
   margin-right: 15px;
   color: white;
-}
-
-.traffic {
-  max-width: 100%;
-  margin-bottom: 15px;
-}
-
-#traffic-chart {
-  @include breakpoint {
-    grid-column: 1 / span 2;
-  }
-  @include breakpoint2 {
-    grid-column: 1 / span 2;
-  }
-}
-
-.traffic-header {
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.traffic-nav li {
-  display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 5px;
-}
-
-.traffic-nav-link-active {
-  background-color: #2AF26D;
-  border-radius: 25%;
-  color: white;
-}
-
-
-.traffic,
-.social-container {
-  @include breakpoint {
-    grid-column: 1 / span 2;
-  }
-  @include breakpoint2 {
-    grid-column: 1 / span 2;
-  }
-}
-
-.daily,
-.members,
-.message {
-  @include breakpoint {
-    grid-column: 1 / span 1;
-  }
-  @include breakpoint2 {
-    grid-column: 1 / span 1;
-  }
-}
-
-.mobile,
-.activity,
-.settings {
-  @include breakpoint {
-    grid-column: 2 / span 1;
-  }
-  @include breakpoint2 {
-    grid-column: 2 / span 1;
-  }
-}
-
-.widget-container-full,
-.widget-container-half {
-  width: 95vw;
-  @include breakpoint {
-    width: 45vw;
-  }
-  @include breakpoint2 {
-    width: 45vw;
-  }
-}
-
-.widget-container-full {
-  margin: 0 auto;
-  @include breakpoint {
-    width: 90vw;
-  }
-  @include breakpoint2 {
-    width: 90vw;
-  }
-}
-
-.daily {
-  border-top: 1px grey solid;
-  border-bottom: 1px grey solid;
-  padding: 10px 10px 25px 10px;
-}
-
-.daily-header {
-  padding-left: 10px;
-}
-
-#daily-chart {
-  @include breakpoint {
-    padding-right: 10px;
-  }
-}
-
-.mobile {
-  border-bottom: 1px grey solid;
-  padding: 10px 30px 25px 10px;
-  @include breakpoint {
-    border: 1px grey solid;
-  }
-}
-
-.mobile-header {
-  padding-left: 10px;
-}
-
-.social-header {
-  padding-left: 20px;
-}
-
-#Layer_1 {
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-}
-
-.twitter-logo {
-  padding-top: 5px;
-}
-
-.social-image {
-  width: 100px;
-  height: 100px;
-  background-color: #7477BF;
-  border-radius: 50%;
-  margin-right: 15px;
-}
-
-.twitter-box,
-.facebook-box,
-.google-plus-box {
-  margin: 15px auto;
-  padding: 10px;
-  width: 70%;
-  display: flex;
-  border: 1px grey solid;
-  border-radius: 5px;
-  background-color: lightgrey;
-  @include breakpoint {
-    width: 30%;
-  }
-}
-
-.social-container {
-  padding-bottom: 20px;
-}
-
-.social-box-number {
-  font-size: 28px;
-  margin: 0;
-  @include breakpoint2 {
-    font-size: 40px;
-  }
-}
-
-.social-box-name {
-  margin: 20px 0 0 0;
-}
-
-.social-box-container {
-  @include breakpoint {
-    display: flex;
-  }
-}
-
-.members {
-  border-top: 1px grey solid;
-  @include breakpoint {
-    border-right: 1px grey solid;
-  }
-}
-
-.activity {
-  @include breakpoint {
-    border-top: 1px grey solid;
-  }
-}
-
-
-.profile-image {
-  border-radius: 50%;
-  margin-right: 10px;
-  @include breakpoint {
-    width: 100px;
-    height: 100px;
-  }
-  @include breakpoint2 {
-    height: 128px;
-    width: 128px;
-  }
-}
-
-.members-header,
-.activity-header {
-  padding-left: 20px;
-}
-
-.members-container {
-  display: flex;
-  padding: 20px 10px;
-  border-bottom: 1px grey solid;
-  align-items: center;
-  @include breakpoint {
-    font-size: 12px;
-  }
-  @include breakpoint2 {
-    font-size: 16px;
-  }
-}
-
-.member-date {
-  margin-left: auto;
-}
-
-.message {
-  border-bottom: 1px grey solid;
-  @include breakpoint {
-    border-right: 1px grey solid;
-  }
-}
-
-.message-header {
-  padding-left: 20px;
-}
-
-.widget-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-field {
-  height: 40px;
-  width: 80%;
-  margin: 10px auto;
-  padding-left: 10px;
-  border: 1px grey solid;
-  border-radius: 5px;
-}
-
-.form-area {
-  height: 100px;
-  width: 80%;
-  margin: 10px auto;
-  padding: 10px 0px 0px 10px;
-  border-radius: 5px;
-}
-
-#send {
-  height: 40px;
-  width: 80%;
-  margin: 10px auto 20px;
-  border-radius: 5px;
-  background-color: #7477BF;
-  color: white;
-}
-
-.settings-header {
-  padding-left: 20px;
-}
-
-.toggle-buttons {
-}
-
-.switch-light {
-  margin: 20px;
-}
-
-strong {
-  width: 200px;
-}
-
-span {
-  width: 50%;
-}
-
-#timezone {
-  display: block;
-  width: 90%;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.settings-button {
-  display: flex;
-  justify-content: space-around;
-}
-
-#save,
-#cancel {
-  width: 40%;
-  height: 40px;
-  border-radius: 5px;
-  color: white;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-#save {
-  background-color: #7477BF;
-}
-
-#cancel {
-  background-color: grey;
 }

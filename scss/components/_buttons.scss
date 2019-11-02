@@ -1,0 +1,38 @@
+#send {
+  height: 40px;
+  width: 80%;
+  margin: 10px auto 20px;
+  border-radius: 5px;
+  background-color: $color-primary;
+  color: white;
+}
+
+#timezone {
+  display: block;
+  width: 90%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.settings-button {
+  display: flex;
+  justify-content: space-around;
+}
+
+#save,
+#cancel {
+  width: 40%;
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#save {
+  background-color: $color-primary;
+}
+
+#cancel {
+  background-color: #AAABAA;
+}

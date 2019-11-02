@@ -1,7 +1,29 @@
+// Breakpoint Mixins
 @mixin breakpoint {
   @media (min-width: $brk-tablet) {@content;}
 }
 
 @mixin breakpoint2 {
   @media (min-width: $brk-desktop) {@content;}
+}
+
+// Border Mixins
+@mixin border {
+  border: 1px $color-border solid;
+}
+
+@mixin border-right {
+  border-right: 1px $color-border solid;
+}
+
+@mixin border-top {
+  border-top: 1px $color-border solid;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px $color-border solid;
+}
+
+@mixin border-left {
+  border-left: 1px $color-border solid;
 }
