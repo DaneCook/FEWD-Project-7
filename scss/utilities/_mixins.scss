@@ -1,4 +1,8 @@
 // Breakpoint Mixins
+@mixin breakpoint-sm {
+  @media (max-width: $brk-small) {@content;}
+}
+
 @mixin breakpoint {
   @media (min-width: $brk-tablet) {@content;}
 }

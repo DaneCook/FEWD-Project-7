@@ -1,4 +1,7 @@
 .traffic {
+  @include breakpoint-sm {
+    max-width: 375px;
+  }
   max-width: 100%;
   margin-bottom: 15px;
 }
@@ -16,7 +19,17 @@
   align-items: center;
 }
 
+.traffic-nav {
+  @include breakpoint-sm {
+    padding-left: 5px;
+  }
+}
+
 .traffic-nav li {
+  @include breakpoint-sm {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
   display: inline-block;
   margin-left: 5px;
   margin-right: 5px;
@@ -69,6 +82,9 @@
 }
 
 .daily {
+  @include breakpoint-sm {
+    max-width: 375px;
+  }
   @include border-top;
   @include border-bottom;
   padding: 10px 10px 25px 10px;
@@ -85,6 +101,9 @@
 }
 
 .mobile {
+  @include breakpoint-sm {
+    max-width: 375px;
+  }
   @include border-bottom;
   padding: 10px 30px 25px 10px;
   @include breakpoint {

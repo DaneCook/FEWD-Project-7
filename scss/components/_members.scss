@@ -1,5 +1,12 @@
 
 .members {
+  @include breakpoint-sm {
+    max-width: 375px;
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
   @include border-top;
   @include breakpoint {
     @include border-right;
@@ -42,6 +49,9 @@
   padding: 20px 10px;
   @include border-bottom;
   align-items: center;
+  @include breakpoint-sm {
+    font-size: 10px;
+  }
   @include breakpoint {
     font-size: 12px;
   }

@@ -75,9 +75,15 @@ span {
 }
 
 .main-header {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media (max-width: 375px) {
+  .main-header {
+    width: 375px;
+  }
 }
 @media (min-width: 768px) {
   .main-header {
@@ -116,6 +122,12 @@ span {
   margin: 15px;
   background-color: #7477BF;
   border-radius: 5px;
+}
+@media (max-width: 375px) {
+  .alert {
+    max-width: 375px;
+    margin: 5px;
+  }
 }
 @media (min-width: 768px) {
   .alert {
@@ -280,6 +292,11 @@ span {
 .social-container {
   padding-bottom: 20px;
 }
+@media (max-width: 375px) {
+  .social-container {
+    max-width: 375px;
+  }
+}
 
 .social-box-number {
   font-size: 28px;
@@ -305,6 +322,11 @@ span {
   max-width: 100%;
   margin-bottom: 15px;
 }
+@media (max-width: 375px) {
+  .traffic {
+    max-width: 375px;
+  }
+}
 
 @media (min-width: 768px) {
   #traffic-chart {
@@ -319,11 +341,23 @@ span {
   align-items: center;
 }
 
+@media (max-width: 375px) {
+  .traffic-nav {
+    padding-left: 5px;
+  }
+}
+
 .traffic-nav li {
   display: inline-block;
   margin-left: 5px;
   margin-right: 5px;
   padding: 5px;
+}
+@media (max-width: 375px) {
+  .traffic-nav li {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
 }
 
 .traffic-nav-link-active {
@@ -380,6 +414,11 @@ span {
   border-bottom: 1px lightgrey solid;
   padding: 10px 10px 25px 10px;
 }
+@media (max-width: 375px) {
+  .daily {
+    max-width: 375px;
+  }
+}
 
 .daily-header {
   padding-left: 10px;
@@ -395,6 +434,11 @@ span {
   border-bottom: 1px lightgrey solid;
   padding: 10px 30px 25px 10px;
 }
+@media (max-width: 375px) {
+  .mobile {
+    max-width: 375px;
+  }
+}
 @media (min-width: 768px) {
   .mobile {
     border: 1px lightgrey solid;
@@ -407,6 +451,15 @@ span {
 
 .members {
   border-top: 1px lightgrey solid;
+}
+@media (max-width: 375px) {
+  .members {
+    max-width: 375px;
+  }
+  .members img {
+    width: 100px;
+    height: 100px;
+  }
 }
 @media (min-width: 768px) {
   .members {
@@ -454,6 +507,11 @@ span {
   padding: 20px 10px;
   border-bottom: 1px lightgrey solid;
   align-items: center;
+}
+@media (max-width: 375px) {
+  .members-container {
+    font-size: 10px;
+  }
 }
 @media (min-width: 768px) {
   .members-container {
